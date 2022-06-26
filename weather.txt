@@ -1,1 +1,1 @@
-('Today is: 24.06.2022', 'Today forecast is:clear sky', 'The minimum temperature is 16.95 Celsius degrees.', 'The maximum temperature is 22.58 Celsius degrees.', 'The pressure is 1012 Hectopascals.')
+('Today is: 26.06.2022', 'Today forecast is:clear sky', 'The minimum temperature is 27.95 Celsius degrees.', 'The maximum temperature is 32.17 Celsius degrees.', 'The pressure is 1014 Hectopascals.')
