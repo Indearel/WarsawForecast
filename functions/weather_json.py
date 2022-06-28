@@ -3,9 +3,9 @@ from datetime import date
 from functions import weather_api
 
 
-def writeToJSONFile(path, fileName, data):
-    filePathNameWExt = './' + path + '/' + fileName + '.json'
-    with open(filePathNameWExt, 'a') as fp:
+def write_to_json_file(path, fileName, data):
+    file_path_name_w_ext = './' + path + '/' + fileName + '.json'
+    with open(file_path_name_w_ext, 'a') as fp:
         json.dump(data, fp)
 
 
@@ -17,10 +17,10 @@ def weather_desc_json():
     filename = 'weather'
 
     data = {}
-    data['Date'] = (current_date)
+    data['Date'] = current_date
     data['Current forecast is '] = weather_dict.get('description')
     data['The minimum temperature is '] = weather_dict.get('temp_min')
     data['The maximum temperature is '] = weather_dict.get('temp_max')
     data['The pressure is '] = weather_dict.get('pressure')
 
-    writeToJSONFile(path, filename, data)
+    write_to_json_file(path, filename, data)
