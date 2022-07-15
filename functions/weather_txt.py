@@ -1,10 +1,13 @@
 from datetime import date
+from datetime import datetime
 from functions import weather_api
 
 
 def weather_desc_txt():
     weather_dict = weather_api.get_weather_descprition_and_temp()
     today = date.today()
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
     current_date = today.strftime("%d.%m.%Y")
 
     today_date = 'Today is: ' + current_date + ' '
@@ -13,8 +16,8 @@ def weather_desc_txt():
     today_maximum_temperature = 'The maximum temperature is ' + str(weather_dict.get('temp_max')) + ' Celsius degrees. '
     today_pressure = 'The pressure is ' + str(weather_dict.get('pressure')) + ' Hectopascals.'
 
-    today_weather = today_date, today_forecast, today_minimum_temperature, today_maximum_temperature, today_pressure
+    today_weather = today_date + current_time, today_forecast, today_minimum_temperature, today_maximum_temperature, today_pressure
 
-    f = open("../WarsawForecast/weather.txt", "w")
+    f = open("../WarsawForecast/weather.txt", "a")
     f.write(str(today_weather))
     f.close()

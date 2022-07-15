@@ -9,8 +9,8 @@ def weather_desc_csv():
     weather_dict = weather_api.get_weather_descprition_and_temp()
     today = date.today()
     now = datetime.now()
-    current_date = today.strftime("%d.%m.%Y")
     current_time = now.strftime("%H:%M:%S")
+    current_date = today.strftime("%d.%m.%Y")
 
     today_date = 'Today is: ' + current_date + ' '
     today_forecast = ' Forecast is:' + weather_dict.get('description') + '. '
@@ -20,4 +20,4 @@ def weather_desc_csv():
 
     weather_csv = open('weather.csv', 'a', newline='')
     weather_csv_write = csv.writer(weather_csv)
-    weather_csv_write.writerow([today_date + current_time , today_forecast, today_min_temp, today_max_temp, today_pressure])
+    weather_csv_write.writerow([today_date + current_time, today_forecast, today_min_temp, today_max_temp, today_pressure])

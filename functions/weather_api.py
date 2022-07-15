@@ -2,7 +2,7 @@ import requests
 
 
 def get_weather_descprition_and_temp():
-    api_key = "token"
+    api_key = "d6ab15dedfb4aacb18e54fa7c6923195"
     city = "Warszawa"
     url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+api_key+"&units=metric"
 
