@@ -5,8 +5,8 @@ from functions import weather_api
 def weather_print_terminal():
     weather_dict = weather_api.get_weather_descprition_and_temp()
     today = date.today()
-    now = datetime.now()
     current_date = today.strftime("%d.%m.%Y")
+    now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
 
     print("Today is:", current_date, current_time)

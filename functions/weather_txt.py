@@ -6,9 +6,9 @@ from functions import weather_api
 def weather_desc_txt():
     weather_dict = weather_api.get_weather_descprition_and_temp()
     today = date.today()
+    current_date = today.strftime("%d.%m.%Y")
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
-    current_date = today.strftime("%d.%m.%Y")
 
     today_date = 'Today is: ' + current_date + ' '
     today_forecast = 'Today forecast is:' + weather_dict.get('description') + '. '
