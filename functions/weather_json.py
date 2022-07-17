@@ -11,7 +11,7 @@ def write_to_json_file(path, fileName, data):
 
 
 def weather_desc_json():
-    weather_dict = weather_api.get_weather_descprition_and_temp()
+    weather_dict = weather_api.get_weather_description_and_temp()
     today = date.today()
     current_date = today.strftime("%d.%m.%Y")
     now = datetime.now()

@@ -4,7 +4,7 @@ from functions import weather_api
 
 
 def weather_desc_txt():
-    weather_dict = weather_api.get_weather_descprition_and_temp()
+    weather_dict = weather_api.get_weather_description_and_temp()
     today = date.today()
     current_date = today.strftime("%d.%m.%Y")
     now = datetime.now()

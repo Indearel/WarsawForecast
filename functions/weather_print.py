@@ -3,7 +3,7 @@ from datetime import datetime
 from functions import weather_api
 
 def weather_print_terminal():
-    weather_dict = weather_api.get_weather_descprition_and_temp()
+    weather_dict = weather_api.get_weather_description_and_temp()
     today = date.today()
     current_date = today.strftime("%d.%m.%Y")
     now = datetime.now()
