@@ -14,7 +14,4 @@ def get_weather_description_and_temp():
     temp_max = json.get("main").get("temp_max")
     pressure = json.get("main").get("pressure")
 
-    return{'description': description,
-            'temp_min': temp_min,
-            'temp_max': temp_max,
-            'pressure': pressure}
+    return{'description': description, 'temp_min': temp_min, 'temp_max': temp_max, 'pressure': pressure}
