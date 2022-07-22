@@ -19,5 +19,5 @@ def weather_desc_txt():
     today_weather = today_date + current_time, today_forecast, today_minimum_temperature, today_maximum_temperature, today_pressure
 
     f = open("../WarsawForecast/weather.txt", "a")
-    f.write(str(today_weather))
+    f.write(str(today_weather) + '\n')
     f.close()

@@ -2,6 +2,7 @@ from datetime import date
 from datetime import datetime
 from functions import weather_api
 
+
 def weather_print_terminal():
     weather_dict = weather_api.get_weather_description_and_temp()
     today = date.today()
