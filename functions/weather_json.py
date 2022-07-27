@@ -20,7 +20,8 @@ def weather_desc_json():
     filename = 'weather'
 
     data = {}
-    data['Date'] = current_date + current_time
+    data['Date'] = current_date
+    data['Time'] = current_time
     data['Current forecast is '] = weather_dict.get('description')
     data['The minimum temperature is '] = weather_dict.get('temp_min')
     data['The maximum temperature is '] = weather_dict.get('temp_max')
